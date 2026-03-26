@@ -184,7 +184,7 @@ export default function Hero() {
             <div className="w-full h-full rounded-[2.5rem] bg-card-bg overflow-hidden relative group">
               <div className="absolute inset-0 bg-gradient-to-t from-theme-bg/80 via-transparent to-transparent z-10" />
               <img
-                src="/profilepic.png"
+                src="/profilepic.jpg"
                 alt="Bhoomi Jain"
                 className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 opacity-70"
               />
