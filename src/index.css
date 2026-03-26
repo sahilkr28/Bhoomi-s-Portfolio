@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --theme-pink: #facbe6;
+    --theme-orange: #fcdca4;
+    --theme-bg: #fdfbf7;
+    --theme-text: #1a1a1a;
+    --card-bg: rgba(255, 255, 255, 0.5);
+    --glass-bg: rgba(255, 255, 255, 0.3);
+    --glass-border: rgba(58, 46, 42, 0.1);
+  }
+
+  .dark {
+    --theme-pink: #d18ab5;
+    --theme-orange: #d1b17a;
+    --theme-bg: #121212;
+    --theme-text: #fdfbf7;
+    --card-bg: rgba(255, 255, 255, 0.05);
+    --glass-bg: rgba(255, 255, 255, 0.05);
+    --glass-border: rgba(255, 255, 255, 0.1);
+  }
+
+  body {
+    @apply bg-theme-bg text-theme-text font-sans antialiased overflow-x-hidden transition-colors duration-500;
+  }
+  
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display tracking-tight;
+  }
+}
+
+@layer utilities {
+  .glass {
+    @apply bg-glass-bg backdrop-blur-lg border border-glass-border;
+  }
+  
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-theme-pink to-theme-orange;
+  }
+}
+
+/* Base styles for Lenis smooth scroll */
+html.lenis, html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-scrolling iframe {
+  pointer-events: none;
+}
